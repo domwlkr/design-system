@@ -8,8 +8,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.base-input {
-  border: 1px solid blue;
-}
+<style lang="css" scoped>
+@import "./baseinput.css";
 </style>

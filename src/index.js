@@ -1,3 +1,11 @@
-import BaseButton from './Components/BaseButton.vue'
+import * as components from './components/index'
 
-export { BaseButton }
+const install = (instance) => {
+  for (let componentKey in components) {
+    instance.user((components)[componentKey])
+  }
+}
+
+export default install
+
+export * from './components'

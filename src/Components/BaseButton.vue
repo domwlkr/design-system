@@ -15,11 +15,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.base-button {
-  background-color: transparent;
-  border: 1px solid blue;
-  color: blue;
-}
-</style>

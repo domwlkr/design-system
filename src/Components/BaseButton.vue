@@ -4,12 +4,15 @@
   </button>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator"
-
-@Component
-export default class BaseButton extends Vue {
-  @Prop() private label: string = 'Click me'
+<script>
+export default {
+  name: 'base-button',
+  props: {
+    label: {
+      type: String,
+      default: 'Button'
+    }
+  }
 }
 </script>
 

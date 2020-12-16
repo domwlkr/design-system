@@ -16,6 +16,33 @@ import nested from 'postcss-nested'
 import { terser } from 'rollup-plugin-terser'
 import autoprefixer from 'autoprefixer'
 
+const postcssConfigList = [
+  postcssImport({
+    resolve(id, basedir) {
+      // resolve alias @css, @import '@css/style.css'
+      // because @css/ has 5 chars
+      if (id.startsWith("@css")) {
+        return path.resolve("./src/assets/styles/css", id.slice(5));
+      }
+
+      // resolve node_modules, @import '~normalize.css/normalize.css'
+      // similar to how css-loader's handling of node_modules
+      if (id.startsWith("~")) {
+        return path.resolve("./node_modules", id.slice(1));
+      }
+
+      // resolve relative path, @import './components/style.css'
+      return path.resolve(basedir, id);
+    }
+  }),
+  simplevars,
+  nested,
+  postcssUrl({ url: "inline" }),
+  autoprefixer({
+    overrideBrowserslist: "> 1%, IE 6, Explorer >= 10, Safari >= 7"
+  })
+];
+
 const argv = minimist(process.argv.slice(2))
 
 const projectRoot = path.resolve(__dirname, '.')

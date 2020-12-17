@@ -1,6 +1,6 @@
 <template>
   <div class="base-card">
-    <h3>{{ Title }}</h3>
+    <h3>{{ title }}</h3>
     <slot></slot>
   </div>
 </template>
@@ -9,9 +9,9 @@
 export default {
   name: 'BaseCard',
   props: {
-    label: {
+    title: {
       type: String,
-      default: 'Label'
+      default: 'Card title'
     }
   }
 }

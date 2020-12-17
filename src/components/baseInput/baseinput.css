@@ -1,3 +1,16 @@
 .base-input {
-  border: 1px solid blue;
+  width: 100%;
+}
+
+.base-input label {
+  color: #8C3264;
+  display: block;
+  font-weight: 600;
+  font-size: .875rem;
+}
+.base-input input {
+  border: 1px solid #281B59;
+  color: #010326;
+  padding: .5rem 1rem;
+  font-size: 1rem;
 }

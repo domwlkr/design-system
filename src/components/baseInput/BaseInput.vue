@@ -1,10 +1,19 @@
 <template>
-  <input class="base-input" />
+  <div class="base-input">
+    <label>{{ label }}</label>
+    <input />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'BaseInput'
+  name: 'BaseInput',
+  props: {
+    label: {
+      type: String,
+      default: 'Label'
+    }
+  }
 }
 </script>
 

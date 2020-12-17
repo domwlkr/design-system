@@ -1,6 +1,8 @@
 
 .base-button {
   background-color: transparent;
-  border: 1px solid blue;
-  color: blue;
+  border: 1px solid #F24957;
+  color: #F24957;
+  padding: .5rem 1rem;
+  width: 100%;
 }

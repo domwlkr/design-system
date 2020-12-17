@@ -21,7 +21,7 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
   return (openBlock(), createBlock("button", _hoisted_1, toDisplayString($props.label), 1))
 });
 
-var css_248z = "\n.base-button[data-v-c851558c] {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
+var css_248z = "\n.base-button[data-v-c851558c] {\n  background-color: transparent;\n  border: 1px solid #F24957;\n  color: #F24957;\n  padding: .5rem 1rem;\n  width: 100%;\n}\n";
 styleInject(css_248z);
 
 script.render = render;

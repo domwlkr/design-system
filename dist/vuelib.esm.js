@@ -1,4 +1,4 @@
-import { pushScopeId, popScopeId, openBlock, createBlock, toDisplayString, withScopeId } from 'vue';
+import { pushScopeId, popScopeId, openBlock, createBlock, toDisplayString, withScopeId, createVNode } from 'vue';
 
 var script = {
   name: 'BaseButton',
@@ -47,7 +47,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.base-button[data-v-c851558c] {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
+var css_248z = "\n.base-button[data-v-c851558c] {\n  background-color: transparent;\n  border: 1px solid #F24957;\n  color: #F24957;\n  padding: .5rem 1rem;\n  width: 100%;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
@@ -64,24 +64,34 @@ var Plugin = {
 };
 
 var script$1 = {
-  name: 'BaseInput'
+  name: 'BaseInput',
+  props: {
+    label: {
+      type: String,
+      "default": 'Label'
+    }
+  }
 };
 
-const _withId$1 = /*#__PURE__*/withScopeId("data-v-63a52cdc");
+const _withId$1 = /*#__PURE__*/withScopeId("data-v-220f81ea");
 
-pushScopeId("data-v-63a52cdc");
+pushScopeId("data-v-220f81ea");
 const _hoisted_1$1 = { class: "base-input" };
+const _hoisted_2 = /*#__PURE__*/createVNode("input", null, null, -1);
 popScopeId();
 
 const render$1 = /*#__PURE__*/_withId$1((_ctx, _cache, $props, $setup, $data, $options) => {
-  return (openBlock(), createBlock("input", _hoisted_1$1))
+  return (openBlock(), createBlock("div", _hoisted_1$1, [
+    createVNode("label", null, toDisplayString($props.label), 1),
+    _hoisted_2
+  ]))
 });
 
-var css_248z$1 = ".base-input[data-v-63a52cdc] {\n  border: 1px solid blue;\n}\n";
+var css_248z$1 = ".base-input[data-v-220f81ea] {\n  width: 100%;\n}\n.base-input label[data-v-220f81ea] {\n  color: #8C3264;\n  display: block;\n  font-weight: 600;\n  font-size: .875rem;\n}\n.base-input input[data-v-220f81ea] {\n  border: 1px solid #281B59;\n  color: #010326;\n  padding: .5rem 1rem;\n  font-size: 1rem;\n}\n";
 styleInject(css_248z$1);
 
 script$1.render = render$1;
-script$1.__scopeId = "data-v-63a52cdc";
+script$1.__scopeId = "data-v-220f81ea";
 
 var Plugin$1 = {
   install: function install(vue) {

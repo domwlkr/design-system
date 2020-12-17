@@ -13,7 +13,7 @@ var components = /*#__PURE__*/Object.freeze({
 
 var install = function install(instance) {
   for (var componentKey in components) {
-    instance.user(components[componentKey]);
+    instance.use(components[componentKey]);
   }
 };
 

@@ -1,5 +1,6 @@
 .base-input {
   width: 100%;
+  text-align: left;
 }
 
 .base-input label {
@@ -10,7 +11,9 @@
 }
 .base-input input {
   border: 1px solid #281B59;
-  color: #010326;
+  border-radius: .25rem;
+  color: #8C3264;
   padding: .5rem 1rem;
   font-size: 1rem;
+  width: 100%;
 }

@@ -1,0 +1,14 @@
+.base-card {
+  width: 100%;
+  text-align: left;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px #BF3F61;
+  padding: 1rem;
+}
+
+.base-input h3 {
+  color: #8C3264;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}

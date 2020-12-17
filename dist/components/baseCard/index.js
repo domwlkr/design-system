@@ -1,7 +1,7 @@
-import { pushScopeId, popScopeId, openBlock, createBlock, createVNode, toDisplayString, withScopeId } from 'vue';
+import { pushScopeId, popScopeId, openBlock, createBlock, createVNode, toDisplayString, renderSlot, withScopeId } from 'vue';
 
 var script = {
-  name: 'BaseInput',
+  name: 'BaseCard',
   props: {
     label: {
       type: String,
@@ -10,17 +10,16 @@ var script = {
   }
 };
 
-const _withId = /*#__PURE__*/withScopeId("data-v-220f81ea");
+const _withId = /*#__PURE__*/withScopeId("data-v-30051ee6");
 
-pushScopeId("data-v-220f81ea");
-const _hoisted_1 = { class: "base-input" };
-const _hoisted_2 = /*#__PURE__*/createVNode("input", null, null, -1);
+pushScopeId("data-v-30051ee6");
+const _hoisted_1 = { class: "base-card" };
 popScopeId();
 
 const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
   return (openBlock(), createBlock("div", _hoisted_1, [
-    createVNode("label", null, toDisplayString($props.label), 1),
-    _hoisted_2
+    createVNode("h3", null, toDisplayString(_ctx.Title), 1),
+    renderSlot(_ctx.$slots, "default")
   ]))
 });
 
@@ -51,11 +50,11 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".base-input {\n  width: 100%;\n  text-align: left;\n}\n\n.base-input label {\n  color: #8C3264;\n  display: block;\n  font-weight: 600;\n  font-size: .875rem;\n}\n\n.base-input input {\n  border: 1px solid #281B59;\n  border-radius: .25rem;\n  color: #8C3264;\n  padding: .5rem 1rem;\n  font-size: 1rem;\n  width: 100%;\n}\n";
+var css_248z = ".base-card {\n  width: 100%;\n  text-align: left;\n  border-radius: 1rem;\n  box-shadow: 0px 0px 20px #BF3F61;\n  padding: 1rem;\n}\n\n.base-input h3 {\n  color: #8C3264;\n  font-weight: 700;\n  font-size: 20px;\n  margin-bottom: 1rem;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-220f81ea";
+script.__scopeId = "data-v-30051ee6";
 
 var registerComponent = function registerComponent(instance, component) {
   instance.component(component.name, component);
@@ -68,4 +67,4 @@ var Plugin = {
 };
 
 export default Plugin;
-export { script as BaseInput };
+export { script as BaseCard };

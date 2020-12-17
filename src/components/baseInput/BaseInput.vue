@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'base-input'
+  name: 'BaseInput'
 }
 </script>
 

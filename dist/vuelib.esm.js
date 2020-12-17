@@ -1,7 +1,7 @@
 import { pushScopeId, popScopeId, openBlock, createBlock, toDisplayString, withScopeId } from 'vue';
 
 var script = {
-  name: 'base-button',
+  name: 'BaseButton',
   props: {
     label: {
       type: String,
@@ -10,9 +10,9 @@ var script = {
   }
 };
 
-const _withId = /*#__PURE__*/withScopeId("data-v-c46e269e");
+const _withId = /*#__PURE__*/withScopeId("data-v-c851558c");
 
-pushScopeId("data-v-c46e269e");
+pushScopeId("data-v-c851558c");
 const _hoisted_1 = { class: "base-button" };
 popScopeId();
 
@@ -47,11 +47,11 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.base-button[data-v-c46e269e] {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
+var css_248z = "\n.base-button[data-v-c851558c] {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-c46e269e";
+script.__scopeId = "data-v-c851558c";
 
 var registerComponent = function registerComponent(instance, component) {
   instance.component(component.name, component);
@@ -64,12 +64,12 @@ var Plugin = {
 };
 
 var script$1 = {
-  name: 'base-input'
+  name: 'BaseInput'
 };
 
-const _withId$1 = /*#__PURE__*/withScopeId("data-v-add609ce");
+const _withId$1 = /*#__PURE__*/withScopeId("data-v-63a52cdc");
 
-pushScopeId("data-v-add609ce");
+pushScopeId("data-v-63a52cdc");
 const _hoisted_1$1 = { class: "base-input" };
 popScopeId();
 
@@ -77,11 +77,11 @@ const render$1 = /*#__PURE__*/_withId$1((_ctx, _cache, $props, $setup, $data, $o
   return (openBlock(), createBlock("input", _hoisted_1$1))
 });
 
-var css_248z$1 = ".base-input[data-v-add609ce] {\n  border: 1px solid blue;\n}\n";
+var css_248z$1 = ".base-input[data-v-63a52cdc] {\n  border: 1px solid blue;\n}\n";
 styleInject(css_248z$1);
 
 script$1.render = render$1;
-script$1.__scopeId = "data-v-add609ce";
+script$1.__scopeId = "data-v-63a52cdc";
 
 var Plugin$1 = {
   install: function install(vue) {

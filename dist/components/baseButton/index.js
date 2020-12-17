@@ -1,75 +1,67 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.BaseButton = {}, global.Vue));
-}(this, (function (exports, vue) { 'use strict';
+import { pushScopeId, popScopeId, openBlock, createBlock, toDisplayString, withScopeId } from 'vue';
 
-  var script = {
-    name: 'base-button',
-    props: {
-      label: {
-        type: String,
-        "default": 'Button'
-      }
+var script = {
+  name: 'BaseButton',
+  props: {
+    label: {
+      type: String,
+      "default": 'Button'
     }
-  };
+  }
+};
 
-  const _withId = /*#__PURE__*/vue.withScopeId("data-v-c46e269e");
+const _withId = /*#__PURE__*/withScopeId("data-v-c851558c");
 
-  vue.pushScopeId("data-v-c46e269e");
-  const _hoisted_1 = { class: "base-button" };
-  vue.popScopeId();
+pushScopeId("data-v-c851558c");
+const _hoisted_1 = { class: "base-button" };
+popScopeId();
 
-  const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
-    return (vue.openBlock(), vue.createBlock("button", _hoisted_1, vue.toDisplayString($props.label), 1))
-  });
+const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
+  return (openBlock(), createBlock("button", _hoisted_1, toDisplayString($props.label), 1))
+});
 
-  function styleInject(css, ref) {
-    if ( ref === void 0 ) ref = {};
-    var insertAt = ref.insertAt;
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
 
-    if (!css || typeof document === 'undefined') { return; }
+  if (!css || typeof document === 'undefined') { return; }
 
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var style = document.createElement('style');
-    style.type = 'text/css';
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
 
-    if (insertAt === 'top') {
-      if (head.firstChild) {
-        head.insertBefore(style, head.firstChild);
-      } else {
-        head.appendChild(style);
-      }
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
     } else {
       head.appendChild(style);
     }
-
-    if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(document.createTextNode(css));
-    }
+  } else {
+    head.appendChild(style);
   }
 
-  var css_248z = "\n.base-button {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
-  styleInject(css_248z);
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
 
-  script.render = render;
-  script.__scopeId = "data-v-c46e269e";
+var css_248z = "\n.base-button {\n  background-color: transparent;\n  border: 1px solid blue;\n  color: blue;\n}\n";
+styleInject(css_248z);
 
-  var registerComponent = function registerComponent(instance, component) {
-    instance.component(component.name, component);
-  };
+script.render = render;
+script.__scopeId = "data-v-c851558c";
 
-  var Plugin = {
-    install: function install(vue) {
-      registerComponent(vue, script);
-    }
-  };
+var registerComponent = function registerComponent(instance, component) {
+  instance.component(component.name, component);
+};
 
-  exports.BaseButton = script;
-  exports.default = Plugin;
+var Plugin = {
+  install: function install(vue) {
+    registerComponent(vue, script);
+  }
+};
 
-  Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export default Plugin;
+export { script as BaseButton };
